@@ -32,7 +32,6 @@ for tweet in request(name, tweetCount):
 	tweet_lists.append(tweet.full_text)
 
 
-
 ##Analyze Tweets
 
 real_words_lst = [] # create a list to store content:
