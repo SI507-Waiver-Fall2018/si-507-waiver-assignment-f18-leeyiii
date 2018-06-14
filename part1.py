@@ -146,7 +146,7 @@ ori_tweets_lists=[]
 ori_tweets_status=[]
 for tweet in request(name, tweetCount):
     if (not tweet.retweeted) and ('RT @' not in tweet.full_text):
-        ori_tweets=int(tweetCount)-1
+        ori_tweets += 1
         ori_tweets_status.append(tweet)
         ori_tweets_lists.append(tweet.full_text)
 
@@ -173,4 +173,23 @@ print("TIMES FAVORITED (ORIGINAL TWEETS ONLY):",ori_fav_count)
 
 ## print the number of retweets
 print("TIMES RETWEETED (ORIGINAL TWEETS ONLY):", ori_re_count)
+
+
+## made a CSV file of the 5 most frequent nouns 
+
+f = open("noun_data.csv","w")
+f.write("Noun, Number\n")
+
+for word_freq_tuple in sorted_nn_freq_lst[0:5]:
+    word, frequency = word_freq_tuple
+    f.write("{},{}\n".format("\"" + word + "\"","\"" + str(frequency) + "\""))
+f.close()
+
+
+
+
+
+
+
+
 
