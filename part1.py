@@ -182,7 +182,7 @@ f.write("Noun, Number\n")
 
 for word_freq_tuple in sorted_nn_freq_lst[0:5]:
     word, frequency = word_freq_tuple
-    f.write("{},{}\n".format("\"" + word + "\"","\"" + str(frequency) + "\""))
+    f.write("{},{}\n".format(word, str(frequency)))
 f.close()
 
 
