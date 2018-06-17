@@ -1,3 +1,10 @@
+
+#FULL NAME: Yi Lee
+#UMICH UNIQUENAME: yilee
+
+
+
+
 # these should be the only imports you need
 import sys
 import sqlite3 as sqlite

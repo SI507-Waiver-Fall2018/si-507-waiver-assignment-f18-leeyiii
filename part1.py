@@ -1,3 +1,9 @@
+
+
+#FULL NAME: Yi Lee
+#UMICH UNIQUENAME: yilee
+
+
 # these should be the only imports you need
 import tweepy
 import nltk
