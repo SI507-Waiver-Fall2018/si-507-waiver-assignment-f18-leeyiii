@@ -16,30 +16,28 @@ table=[]
 for row in data:
 	table.append(row)
 	
-lst=[]
+noun_lst=[]
+frequency_lst = []
 
-for i in table:
-	m = i.replace('"','')
-	lst.append(m)
-
-
-
+for i in table[1:]:
+    noun, frequency = i[:-1].split(",")
+    noun_lst.append(noun)
+    frequency_lst.append(int(frequency))
 	
-print(m)
-
+print(noun_lst)
+print(frequency_lst)
 
 df.close()
 
-'''
-
 data = [go.Bar(
-			x=[table[1][0], table[2][0] ],
-			y=[int(table[1][1]), int(table[2][1]) ]
-	)]
+        x = noun_lst,
+        y = frequency_lst
+    )]
 
-py.iplot(data,filename='part4_viz_image')
+fig = go.Figure(data=data)
+py.image.save_as(fig, filename='part4_viz_image.png')
 
-'''
+
 
 
 
